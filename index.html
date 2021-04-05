@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css-layout</title>
+</head>
+<body>
+
+	<div class="parts">
+	  <header>
+	  	<p>Blood Bank</p>
+	  </header>
+
+	  <nav>
+	  	<p>Menu</p>
+	  </nav>
+
+	  <content>
+	  	<img src="Blood.jfif" alt="">
+	  	<br>
+	  	<br>
+	  	<br>
+	  	<br>
+	  	<br>
+	  	<br>
+	  	<br>
+	  	<br>
+		<P><b>Welcome to Blood Bank</b></P>
+		<br>
+		<P><b>Find Your Blood Donor</b></P>
+	  </content>
+
+	  <footer>
+	  	<p><b>Copyright &copy; 2021 Blood Bank. All Rights Reserved</b></p>
+	  </footer>
+
+	</div>
+
+	<style>
+		
+		.parts{
+			
+			min-height: 100vh;
+			display: grid;
+			grid-template-rows: 20% 60% 20%;
+			grid-template-columns: 30% 70%;
+			grid-template-areas: 
+			"header header"
+			"nav content"
+			"nav footer";
+			grid-gap: 10px;
+		}
+
+		img{
+			margin-top: 30px;
+			margin-left: 30px;
+			width: 30%;
+			float: left;
+		}
+
+		p{
+			text-align: center;
+			font-weight: bold;
+			font-size: 30px;
+			vertical-align: middle;
+		}
+
+		header{
+		    grid-area: header;
+		    background-color: pink;
+		}
+		nav{
+		    grid-area: nav;
+		    background-color: yellow;
+		}
+		content{
+		    grid-area: content;
+		    background-color: orange;
+		}
+		footer{
+		    grid-area: footer;
+		    background-color: green;
+		}
+
+
+	</style>
+
+</body>
+</html>
